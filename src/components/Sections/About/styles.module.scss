@@ -1,0 +1,23 @@
+@import "../../../css/sassVariables.scss";
+@import "../../../css/mixins.scss";
+.About {
+  h2.title {
+    margin-top: 13px;
+    background-image: url("img/patterns/fishnets-and-hearts.png");
+
+    @include underline(black, 1s, 5px);
+  }
+
+  div.img {
+    background-repeat: no-repeat;
+
+    width: 100%;
+    min-height: 200px;
+    overflow: hidden;
+    background-image: url("../../../img/self/wide.jpg");
+    background-position: 59% 78%;
+    background-size: 100%;
+
+    border-radius: 20px;
+  }
+}

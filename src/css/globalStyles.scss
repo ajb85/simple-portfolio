@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Hind+Vadodara|Overlock+SC|Palanquin+Dark");
+@import "./sassVariables.scss";
+* {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: $font;
+}

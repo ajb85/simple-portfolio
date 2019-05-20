@@ -1,0 +1,107 @@
+@import "../../css/sassVariables.scss";
+@import "../../css/mixins.scss";
+
+$height: 100vh;
+.header {
+  height: $height;
+  background-image: url("../../img/backgrounds/leaves.jpg");
+  background-repeat: none;
+  background-size: cover;
+  background-color: #000;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-width: $minSize;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(#{$height} * 0.8);
+  min-height: 225px;
+  min-width: $minSize;
+
+  h1 {
+    margin: 10px 0 0;
+    font-size: 4.5rem;
+    font-family: $fontHeader;
+    color: $mainColorLight;
+    -webkit-text-stroke: 1px $black;
+  }
+  h2 {
+    font-size: 2.4rem;
+    font-family: $fontHeader;
+    font-weight: 800;
+    color: $secondaryColor;
+    border-bottom: 2px solid $black;
+    padding-bottom: 2px;
+    -webkit-text-stroke: 0.25px $black;
+  }
+}
+
+.headerIMG {
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  overflow: hidden;
+  background-image: url("../../img/self/mug.jpg");
+  background-position: 59% 78%;
+  background-size: 375px 250px;
+
+  border-radius: 100%;
+}
+
+.navigation {
+  width: 100%;
+  height: 75px;
+
+  margin-top: 45px;
+  padding-bottom: 12px;
+  font-family: $font;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+
+  a {
+    $hoverColor: $tertiaryColor;
+    color: $secondaryColor;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: 0.25s;
+    text-shadow: 2px 2px rgba(50, 50, 50, 0.5);
+
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      color: $hoverColor;
+      text-shadow: 2px 1px rgba(105, 57, 12, 0.5);
+      //-webkit-text-stroke: 0.25px $secondaryColor;
+    }
+
+    @include reactToClick();
+
+    @include underline($hoverColor);
+  }
+}
+
+.navBG {
+  position: absolute;
+  z-index: 0;
+  top: -37px;
+  right: -47.5vw;
+  background-color: $mainColorLight;
+  border-radius: 25px;
+  opacity: 0.5;
+  width: 95vw;
+  height: 40px;
+}
