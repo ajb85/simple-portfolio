@@ -1,6 +1,5 @@
 import React from "react";
 //import { Route } from "react-router-dom";
-import moment from "moment";
 
 import styles from "./styles.module.scss";
 
@@ -13,7 +12,7 @@ function Skills({ observer, history }) {
     <section className={styles.Projects}>
       <h2 className={title}>Projects</h2>
 
-      <p className={styles.para}>
+      <p className={styles.para} ref={observer.reference}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Dolor purus non enim
         praesent. Vestibulum morbi blandit cursus risus at ultrices mi tempus

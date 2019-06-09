@@ -1,27 +1,24 @@
-// Colors
-// $secondaryColor: #f7f7ed;
-// $purple: #3e4155;
-// $blue: #335e85;
-// $mainColorLight: lighten(#346887, 40%);
-// $mainColor: #2e3c5b;
-// $header: #95cda5;
+@import url("https://fonts.googleapis.com/css?family=Istok+Web|Poppins|Roboto&display=swap");
 
-$mainColor: #843632;
-$mainColorLight: #d77866;
-$secondaryColor: #f7f7ed;
-$tertiaryColor: #69390b;
+$mainColor: #46564e;
+$mainColorLight: #8e8363;
+$secondaryColor: #fefefe;
+$tertiaryColor: #b8a08f;
+$accent: #361c25; //6b575e
+$accentLight: #6b575e;
 $black: #36454f;
-
-// $lightRed: #D77866;
-// $red: #843632;
-// $
+$darkBlack: #0f1316;
+$white: $secondaryColor;
 
 // Fonts
-$fontHeader: "Palanquin Dark", sans-serif;
-$fontSubHead: "Overlock SC", cursive;
-$font: "Hind Vadodara", sans-serif;
-
-// Breakpoints
+$fontHeader: "Poppins", sans-serif;
+$fontSubHead: "Istok Web", sans-serif;
+$font: "Roboto", sans-serif;
 
 // Sizing
 $minSize: 280px;
+$maxSize: 1800px;
+$lh: 25px;
+
+// Breakpoints
+$flip: "(min-width: 900px)";

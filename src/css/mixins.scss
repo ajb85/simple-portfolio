@@ -22,23 +22,71 @@
   }
 }
 
-@mixin learnMoreButton() {
-  background-color: #fff;
-  border: 1px solid $mainColor;
+@mixin moveButton($botMargin: 0px) {
+  $trans: 0.5s;
+  border: 2px solid $accent;
+  transition: border $trans;
+  cursor: pointer;
+  margin-top: $botMargin;
 
-  width: 145px;
-  height: 40px;
-  font-size: 1.2rem;
-  font-family: $font;
-  text-shadow: 0px 1px $secondaryColor;
+  button {
+    border: none;
+    background-color: $accent;
+    color: $tertiaryColor;
+    margin: 3px;
+    width: 250px;
+    height: 2 * $lh;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color $trans, color $trans;
 
-  transition: 0.25s;
+    &:focus {
+      outline: $white;
+    }
+  }
 
   &:hover {
-    background-color: $mainColor;
-    color: $secondaryColor;
-    border: 1px solid $mainColorLight;
-    text-shadow: none;
+    border: 2px solid $accentLight;
+    button {
+      background-color: $accentLight;
+      color: $white;
+    }
   }
-  @include reactToClick;
+
+  @include reactToClick();
 }
+
+// @mixin skewedBox($color: $mainColorLight, $width: 350px) {
+//   background-color: $white;
+//   margin: 20px 20px;
+//   position: relative;
+//   width: $width;
+//   padding: 20px;
+//   border-radius: 20px;
+//   box-shadow: 2px 5px 3px rgba(0, 0, 0, 0.2);
+
+//   div.titleBG {
+//     width: 100%;
+//     height: 100px;
+//     background-color: $color;
+//     position: absolute;
+//     transform: skew(-10deg, -3deg);
+//     right: 0px;
+//     box-shadow: 10px 10px rgba($color, 0.3);
+//   }
+
+//   div.titleFiller {
+//     width: 100%;
+//     height: 100px;
+//   }
+
+//   h3 {
+//     font-size: 2rem;
+//     color: $white;
+//     position: relative;
+//     bottom: 70px;
+//     text-align: center;
+//     font-family: $font;
+//     transform: rotate(-3deg);
+//   }
+// }

@@ -1,56 +1,116 @@
-@import "../../../css/sassVariables.scss";
-@import "../../../css/mixins.scss";
-.Skills {
-  h2.title {
-    margin-top: 13px;
+@import "css/sassVariables.scss";
+@import "css/mixins.scss";
 
-    @include underline(black, 1s, 5px);
+.Skills {
+  background-image: url("img/patterns/prism.png");
+  color: $white;
+  height: auto;
+
+  h2.title {
+    @include underline($white, 1s, 5px);
   }
 
-  .skillsContainer {
+  main.content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    max-width: 380px;
+    flex-direction: column;
 
-    @media (min-width: 650px) {
-      max-width: initial;
+    @media #{$flip} {
+      width: 100%;
+      flex-direction: row-reverse;
+      align-items: center;
     }
   }
 
-  ul.skillsList {
-    font-size: 1.2rem;
-    min-width: 260px;
-    max-width: 220px;
-    margin: 0 0 15px;
+  .tableContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
 
-    &:first-of-type {
-      margin-right: 20px;
+    @media (min-width: 650px) {
+      // max-width: initial;
+    }
+  }
+}
+
+ul.skillsList {
+  min-width: 260px;
+  margin: 0px;
+  width: 100%;
+  background-color: $white;
+  color: $black;
+
+  h2 {
+    text-align: center;
+    margin: $lh/2 0;
+  }
+
+  li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: $lh/2 20px;
+    color: $black;
+    font-size: 1.3rem;
+    font-family: $font;
+
+    &:nth-child(odd) {
+      background-color: #f7f7f7;
+    }
+    &:nth-child(even) {
+      background-color: #e8e8e8;
     }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 7px;
+    span:nth-child(2) {
+      // Skill name & years
+
+      @media (max-width: 400px) {
+        font-size: 1rem;
+        min-width: 65px;
+      }
     }
-    li {
+
+    div {
+      max-width: 170px;
+      min-width: 160px;
       width: 100%;
       display: flex;
       justify-content: space-between;
-      margin: 7px 0;
-      div {
-        max-width: 128px;
-        min-width: 128px;
-        display: flex;
-        justify-content: space-between;
 
-        span:nth-of-type(1) {
-          min-width: 35px;
+      span:nth-of-type(1) {
+        min-width: 35px;
+
+        @media (max-width: 400px) {
+          font-size: 1.2rem;
         }
+      } // span-of-type 1
+      span:nth-of-type(2) {
+        // Skill name & years
+        min-width: 145px;
 
-        span:nth-of-type(2) {
+        @media (max-width: 400px) {
+          max-width: 130px;
           min-width: 130px;
         }
       }
-    }
+    } // div
+  } //li
+} // skillsList
+
+div.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 30px 0 0px;
+
+  p.para {
+    font-size: 1.5rem;
+    max-width: 500px;
   }
 }

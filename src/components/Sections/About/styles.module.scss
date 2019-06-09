@@ -1,23 +1,121 @@
 @import "../../../css/sassVariables.scss";
 @import "../../../css/mixins.scss";
+
+$bpMed: "(min-width: 700px)";
+
 .About {
+  height: auto;
+  background-image: url("img/patterns/fishnets-and-hearts.png");
+  color: $black;
+  padding: 0 20px;
   h2.title {
-    margin-top: 13px;
-    background-image: url("img/patterns/fishnets-and-hearts.png");
+    @include underline($black, 1s, 5px);
+  }
+} // .About
 
-    @include underline(black, 1s, 5px);
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2 * $lh;
+  width: 100%;
+
+  @media #{$flip} {
+    flex-direction: row;
   }
 
-  div.img {
-    background-repeat: no-repeat;
-
-    width: 100%;
-    min-height: 200px;
+  .imgContainer {
+    height: 30vh;
+    min-height: 13 * $lh;
     overflow: hidden;
-    background-image: url("../../../img/self/wide.jpg");
-    background-position: 59% 78%;
-    background-size: 100%;
+    margin: $lh 0 2 * $lh;
 
-    border-radius: 20px;
+    @media #{$flip} {
+      width: calc(50% - 10px);
+      height: 50vh;
+      border-radius: 20px;
+      margin: 0;
+    }
+
+    img {
+      width: 1100px;
+      position: relative;
+      bottom: 220px;
+      right: 8%;
+
+      @media #{$flip} {
+        bottom: 210px;
+        transform: scaleX(-1);
+        right: calc(440px - 45%);
+      }
+    }
   }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media #{$flip} {
+      padding-left: 20px;
+      width: 50%;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-family: $font;
+      width: 100%;
+      max-width: 500px;
+
+      @media (max-width: 400px) {
+        font-size: 1.3rem;
+      }
+
+      @media (max-width: 340px) {
+        font-size: 1.2rem;
+      }
+
+      @media #{$flip} {
+        max-width: none;
+      }
+
+      &:nth-of-type(2) {
+        margin-bottom: 0px;
+      } // &
+    } // p
+  } // main
+} // content
+
+.moveButton {
+  @include moveButton($lh);
 }
+
+/*
+Image by itself
+
+img {
+    width: 110%;
+    height: 30vh;
+    min-height: 8 * $lh;
+    margin: 25px 0;
+
+    object-fit: cover;
+    object-position: 50% 70%;
+
+    @media (min-width: 550px) {
+      object-position: 50% 40%;
+    }
+
+    @media #{$flip} {
+      width: 50%;
+      height: 50vh;
+      min-height: 200px;
+      border-radius: 20px;
+      object-fit: cover;
+      object-position: 60% 50%;
+      padding-right: 10px;
+    }
+  }
+
+*/

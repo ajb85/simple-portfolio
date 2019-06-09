@@ -17,7 +17,7 @@ import Projects from "./components/Sections/Projects";
 function App() {
   let observers = createViewHooks();
   return (
-    <div className="App">
+    <div className={styles.App}>
       <div />
       <Header />
       <About observer={observers.About} />

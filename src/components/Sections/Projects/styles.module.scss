@@ -2,76 +2,9 @@
 @import "../../../css/mixins.scss";
 
 .Projects {
-  padding: 10px;
-  min-width: $minSize;
-  background-image: url("../../../img/patterns/fishnets-and-hearts.png");
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-image: url("img/patterns/prism.png");
 
   h2.title {
-    font-size: 2rem;
-    font-family: $fontHeader;
-    margin: 60px 0 20px;
-    width: 100%;
-    text-align: center;
-
-    @include underline($black, 1s, 5px);
-  }
-
-  .skillsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    max-width: 380px;
-
-    @media (min-width: 650px) {
-      max-width: initial;
-    }
-  }
-
-  ul.skillsList {
-    font-size: 1.2rem;
-    min-width: 260px;
-    max-width: 220px;
-    margin: 0 0 15px;
-
-    &:first-of-type {
-      margin-right: 20px;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 7px;
-    }
-    li {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      margin: 7px 0;
-      div {
-        max-width: 128px;
-        min-width: 128px;
-        display: flex;
-        justify-content: space-between;
-
-        span:nth-of-type(1) {
-          min-width: 35px;
-        }
-
-        span:nth-of-type(2) {
-          min-width: 130px;
-        }
-      }
-    }
-  }
-
-  p.para {
-    line-height: 1.3;
-    max-width: 400px;
-    margin: 0 0 20px;
-  }
-  button {
-    @include learnMoreButton();
+    @include underline($white, 1s, 5px);
   }
 }
