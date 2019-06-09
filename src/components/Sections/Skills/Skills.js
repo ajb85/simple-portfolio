@@ -22,7 +22,6 @@ function Skills({ observer }) {
             </span>
             <span>{skill.name}</span>
           </div>
-
           <span>
             {year}.{month.substring(month.length - 1)} years
           </span>
@@ -46,19 +45,29 @@ function Skills({ observer }) {
         </div>
         <div className={styles.textContainer}>
           <p className={styles.para}>
-            Urna id volutpat lacus laoreet non curabitur gravida. Fermentum dui
-            faucibus in ornare quam viverra. Porta nibh venenatis cras sed felis
-            eget velit. Curabitur vitae nunc sed velit dignissim. In eu mi
-            bibendum neque egestas congue quisque egestas diam. Nisi quis
-            eleifend quam adipiscing vitae. Arcu ac tortor dignissim convallis
-            aenean et. Nisi scelerisque eu ultrices vitae auctor eu augue. Enim
-            sed faucibus turpis in eu mi. Nisi scelerisque eu ultrices vitae
-            auctor. Cursus mattis molestie a iaculis at erat pellentesque.
-            Malesuada fames ac turpis egestas integer. Facilisis sed odio morbi
-            quis commodo odio aenean sed. Nisi est sit amet facilisis.
+            My background in restaurant training and management may not directly
+            help me write code but I did gathered numerous soft skills valuable
+            in any industry. For example, I am very skilled at teaching people
+            new skills and I can manage teams of people very effectively.
+          </p>
+          <p className={styles.para}>
+            These skills have proven most valuable recently in my TA position at
+            Lambda School. My feedback is detailed and catered to the student.
+            This has allowed my more skilled students to ramp up faster while
+            preventing struggling students from falling further behind.
+          </p>
+          <p className={styles.para}>
+            In regards to coding, I have spent the majority of the last two
+            years focused on frontend development. I particularly enjoy the UI
+            components that can be created in React and have a passion for
+            writing reusable code. Feel free to look over the Training Bot
+            project listed below to see an example of my abilities.
           </p>
         </div>
       </main>
+      <a href="#projects" className={styles.moveButton}>
+        <button>Projects</button>
+      </a>
     </section>
   );
 }
