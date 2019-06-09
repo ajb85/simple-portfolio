@@ -34,10 +34,18 @@ const createViewHooks = () => {
   const contact = useInView({ threshold: 0, triggerOnce: true });
 
   return {
-    About: { reference: about[0], inView: about[1] },
-    Skills: { reference: skills[0], inView: skills[1] },
-    Projects: { reference: projects[0], inView: projects[1] },
-    Contact: { reference: contact[0], inView: contact[1] }
+    About: { reference: about[0], inView: about[1], active: styles.active },
+    Skills: { reference: skills[0], inView: skills[1], active: styles.active },
+    Projects: {
+      reference: projects[0],
+      inView: projects[1],
+      active: styles.active
+    },
+    Contact: {
+      reference: contact[0],
+      inView: contact[1],
+      active: styles.active
+    }
   };
 };
 
