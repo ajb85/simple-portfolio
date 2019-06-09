@@ -1,14 +1,15 @@
 @import "./sassVariables.scss";
 
-@mixin underline($color, $time: 0.25s, $margin: 0) {
+@mixin underline($color, $time: 0.25s, $margin: $lh) {
+  $height: 2px;
   &::after {
     content: "";
     display: block;
     width: 0;
-    height: 3px;
+    height: $height;
     background: $color;
     transition: width $time;
-    margin-top: $margin;
+    margin-top: calc($margin - $height);
   }
   &.active::after {
     width: 100%;
@@ -22,21 +23,25 @@
   }
 }
 
-@mixin moveButton($botMargin: 0px) {
+@mixin moveButton($margin: $lh) {
+  $bMargin: 3px;
+  $border: 2px;
   $trans: 0.5s;
-  border: 2px solid $accent;
+  border: $border solid $accent;
   transition: border $trans;
   cursor: pointer;
-  margin-top: $botMargin;
+  margin-top: $margin - 2 * $border - 2 * $bMargin;
+  margin-bottom: $margin;
 
   button {
     border: none;
     background-color: $accent;
     color: $tertiaryColor;
-    margin: 3px;
+    margin: $bMargin;
+    padding: 0;
     width: 250px;
     height: 2 * $lh;
-    font-size: 2rem;
+    font-size: 1.9rem;
     cursor: pointer;
     transition: background-color $trans, color $trans;
 
