@@ -3,9 +3,7 @@ import styles from "./styles.module.scss";
 import me from "img/self/wall.jpg";
 
 function About({ observer }) {
-  const title = observer.inView
-    ? `${styles.title} ${styles.active}`
-    : `${styles.title}`;
+  const title = observer.inView ? observer.active : "";
 
   return (
     <section id="about" className={styles.About}>

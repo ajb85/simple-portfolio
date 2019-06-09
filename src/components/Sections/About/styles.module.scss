@@ -7,10 +7,6 @@ $bpMed: "(min-width: 700px)";
   height: auto;
   background-image: url("img/patterns/fishnets-and-hearts.png");
   color: $black;
-  padding: 0 20px;
-  h2.title {
-    @include underline($black, 1s, 5px);
-  }
 } // .About
 
 .content {
