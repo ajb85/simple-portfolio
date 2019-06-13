@@ -107,7 +107,7 @@ header {
   @media #{$flip} {
     height: auto;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-bottom: 50px;
   }
 }
@@ -143,13 +143,13 @@ header {
     }
 
     @media #{$flip} {
-      margin-bottom: 50px;
+      margin-bottom: $lh;
     }
   }
 }
 
 .button {
-  @include moveButton();
+  @include moveButton($lh);
 }
 
 div.socialLinks {
@@ -161,7 +161,7 @@ div.socialLinks {
   min-width: 250px;
 
   @media #{$flip} {
-    margin-top: 2 * $lh;
+    margin-top: $lh;
     justify-content: space-between;
     min-width: 125px;
     width: initial;
@@ -170,12 +170,23 @@ div.socialLinks {
   a {
     color: $mainColor;
     font-size: 4rem;
+    transition: color $trans;
 
     &:nth-child(1) {
-      color: #0077b5;
+      $color: #0077b5;
+      color: $color;
+
+      &:hover {
+        color: lighten($color, 10%);
+      }
     }
     &:nth-child(2) {
-      color: #101010;
+      $color: #101010;
+      color: $color;
+
+      &:hover {
+        color: lighten($color, 20%);
+      }
     }
   }
 }

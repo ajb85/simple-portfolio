@@ -23,10 +23,9 @@
   }
 }
 
-@mixin moveButton($margin: $lh) {
+@mixin moveButton($margin: 2 * $lh) {
   $bMargin: 3px;
   $border: 2px;
-  $trans: 0.5s;
   border: $border solid $accent;
   transition: border $trans;
   cursor: pointer;

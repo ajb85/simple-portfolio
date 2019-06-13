@@ -21,7 +21,7 @@ function About({ observer }) {
           </p>
           <p>
             I have a passion for problem solving, enormous amount of experience
-            with managing and training personnel, and a focus on writing writing
+            with managing and training personnel, and a focus on writing
             reusable and scalable code.
           </p>
           <a href="#skills" className={styles.moveButton}>

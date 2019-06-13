@@ -84,7 +84,7 @@ $bpMed: "(min-width: 700px)";
 } // content
 
 .moveButton {
-  @include moveButton($lh);
+  @include moveButton();
 }
 
 /*
