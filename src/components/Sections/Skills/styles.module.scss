@@ -25,7 +25,7 @@
     justify-content: space-evenly;
     align-items: flex-start;
     width: 100%;
-    max-width: 500px;
+    max-width: 300px;
     border-radius: 20px;
     overflow: hidden;
 
@@ -51,7 +51,7 @@ ul.skillsList {
   li {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0;
     padding: $lh/2 20px;
     color: $black;
@@ -67,30 +67,24 @@ ul.skillsList {
 
     span:nth-child(2) {
       // Skill name & years
-
-      @media (max-width: 400px) {
-        font-size: 1rem;
-        min-width: 65px;
-      }
     }
 
     div {
-      max-width: 170px;
+      max-width: 190px;
       min-width: 160px;
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
 
       span:nth-of-type(1) {
-        min-width: 35px;
-
         @media (max-width: 400px) {
           font-size: 1.2rem;
         }
       } // span-of-type 1
       span:nth-of-type(2) {
         // Skill name & years
-        min-width: 160px;
+        margin-left: 20px;
+        white-space: nowrap;
 
         @media (max-width: 400px) {
           max-width: 130px;

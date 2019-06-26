@@ -1,16 +1,11 @@
 import React from "react";
-import moment from "moment";
-//import { Route } from "react-router-dom";
 
 import { techSkills, softSkills } from "./data.js";
 import styles from "./styles.module.scss";
 
 function Skills() {
   const getSkillsList = skillsList => {
-    const today = moment();
     return skillsList.map(skill => {
-      const year = today.diff(skill.start, "years");
-      const month = (today.diff(skill.start, "months") / 12).toFixed(1);
       return (
         <li key={skill.name}>
           <div>
@@ -19,13 +14,11 @@ function Skills() {
             </span>
             <span>{skill.name}</span>
           </div>
-          <span>
-            {year}.{month.substring(month.length - 1)} years
-          </span>
         </li>
       );
     });
   };
+
   return (
     <section className={styles.Skills} id="skills">
       <h2>Skills</h2>
