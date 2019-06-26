@@ -5,10 +5,6 @@
   background-image: url("img/patterns/stripes-light.png");
   color: $black;
   height: auto;
-
-  h2.title {
-    @include underline($black, 1s, 5px);
-  }
 }
 
 div.row {
@@ -16,7 +12,7 @@ div.row {
   flex-wrap: wrap;
   justify-content: space-between;
   width: calc(50vw + 452px);
-  margin-bottom: 2 * $lh;
+  margin: $lh 0;
 }
 
 div.project {
@@ -47,5 +43,76 @@ div.project {
   p {
     margin: $lh - 3px 0 0;
     font-size: 1.3rem;
+  }
+}
+
+.fullCard {
+  padding: $lh;
+  h2 {
+    margin: $lh 0;
+  }
+  img {
+    width: 70%;
+    min-height: 400px;
+    height: 30vh;
+    object-fit: scale-down;
+    border-radius: 20px;
+  }
+  p {
+    width: 100%;
+    max-width: none;
+    margin-top: 2 * $lh;
+  }
+}
+
+div.projectInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.tech {
+  width: 25%;
+  background-color: $tertiaryColor;
+  border-radius: 20px;
+  h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 3 * $lh;
+    font-family: $fontHeader;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    color: $secondaryColor;
+
+    li {
+      line-height: 2 * $lh;
+      padding-left: $lh;
+      font-size: 1.5rem;
+
+      i {
+        margin-right: $lh;
+      }
+
+      span {
+        display: inline-block;
+        width: calc(100% - 50px);
+        text-align: center;
+      }
+    }
+
+    & > div {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    li:nth-child(odd) {
+      background-color: $accent;
+    }
+    li:nth-child(even) {
+      background-color: $accentLight;
+    }
   }
 }

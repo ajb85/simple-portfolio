@@ -5,10 +5,7 @@ import moment from "moment";
 import { techSkills, softSkills } from "./data.js";
 import styles from "./styles.module.scss";
 
-function Skills({ observer }) {
-  const title = observer.inView
-    ? `${styles.title} ${styles.active}`
-    : `${styles.title}`;
+function Skills() {
   const getSkillsList = skillsList => {
     const today = moment();
     return skillsList.map(skill => {
@@ -31,9 +28,9 @@ function Skills({ observer }) {
   };
   return (
     <section className={styles.Skills} id="skills">
-      <h2 className={title}>Skills</h2>
+      <h2>Skills</h2>
       <main className={styles.content}>
-        <div className={styles.tableContainer} ref={observer.reference}>
+        <div className={styles.tableContainer}>
           <ul className={styles.skillsList}>
             <h2>Technical</h2>
             {getSkillsList(techSkills)}

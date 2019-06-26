@@ -14,21 +14,17 @@ section {
   overflow: hidden;
 
   h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: $fontHeader;
     width: 100%;
     text-align: center;
-    margin: $lh;
+    margin: $lh * 1.5 0;
     line-height: 2 * $lh;
-  }
-
-  & > h2:nth-child(1) {
-    @include underline($black, 1s);
   }
 
   p {
     line-height: $lh;
-    margin-bottom: 25px;
+    margin-bottom: $lh;
     width: 100%;
     max-width: 400px;
   }

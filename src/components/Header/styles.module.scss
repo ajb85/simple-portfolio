@@ -23,7 +23,6 @@ header {
   @media #{$flip} {
     width: 50%;
     height: 100vh;
-    border-left: 1px solid $black;
   }
 
   img {

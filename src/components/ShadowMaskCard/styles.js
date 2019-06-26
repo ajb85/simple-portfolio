@@ -1,9 +1,10 @@
 import styled from "styled-components";
+const font = `"Istok Web", sans-serif`;
 
 export const ShadowMask = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: ${props => props.shadowColor || "rgba(0, 0, 0)"};
+  background-color: ${props => props.shadowColor || "rgb(0, 0, 0)"};
   opacity: ${props => props.opacity || "0.7"};
   cursor: default;
 
@@ -14,9 +15,11 @@ export const ShadowMask = styled.div`
 
   p {
     position: absolute;
-    top: 10px;
-    right: 25px;
+    top: 12px;
+    right: 40px;
     color: #eee;
+    width: initial;
+    font-family: ${font};
 
     &:hover {
       color: #aaa;
@@ -44,17 +47,17 @@ export const MaskCard = styled.div`
   right: 0;
   z-index: ${props => props.index || "1"};
 `;
-function setTopMargin(margin, height) {
-  if (!margin) return;
-  const marginValue =
-    indexOfNonNumeric(margin) > -1
-      ? margin.substring(0, indexOfNonNumeric(margin))
-      : margin;
-  const index = indexOfNonNumeric(height);
-  const heightValue = height.substring(0, index);
-  const heightUnit = height.substring(index);
-  return `${Number(marginValue) * 2 + Number(heightValue)}${heightUnit}`;
-}
+// function setTopMargin(margin, height) {
+//   if (!margin) return;
+//   const marginValue =
+//     indexOfNonNumeric(margin) > -1
+//       ? margin.substring(0, indexOfNonNumeric(margin))
+//       : margin;
+//   const index = indexOfNonNumeric(height);
+//   const heightValue = height.substring(0, index);
+//   const heightUnit = height.substring(index);
+//   return `${Number(marginValue) * 2 + Number(heightValue)}${heightUnit}`;
+// }
 function halfHeight(height) {
   if (!height) return;
   const index = indexOfNonNumeric(height);

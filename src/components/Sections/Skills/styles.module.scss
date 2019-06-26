@@ -6,10 +6,6 @@
   color: $white;
   height: auto;
 
-  h2.title {
-    @include underline($white, 1s, 5px);
-  }
-
   main.content {
     display: flex;
     flex-wrap: wrap;
@@ -49,6 +45,7 @@ ul.skillsList {
   h2 {
     text-align: center;
     margin: $lh/2 0;
+    font-size: 2.5rem;
   }
 
   li {
