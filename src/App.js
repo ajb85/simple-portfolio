@@ -8,7 +8,7 @@ import "./css/globalStyles.scss";
 import styles from "./styles.module.scss";
 
 // Components
-import Header from "./components/Header";
+import Header from "./components/Sections/Header";
 import About from "./components/Sections/About";
 import Skills from "./components/Sections/Skills";
 import Projects from "./components/Sections/Projects";
