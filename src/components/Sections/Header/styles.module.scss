@@ -1,0 +1,191 @@
+@import "css/sassVariables.scss";
+@import "css/mixins.scss";
+
+$minHeight: 568px;
+
+header {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: $minHeight;
+
+  @media #{$flip} {
+    flex-direction: row-reverse;
+    height: 100vh;
+  }
+}
+
+.headerIMG {
+  height: 50vh;
+
+  @media #{$flip} {
+    width: 50%;
+    height: 100vh;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-position: 46% 0%;
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-width: 263px;
+    min-height: 4 * $lh;
+
+    @media #{$flip} {
+    }
+  }
+
+  div.quote {
+    width: 100%;
+    min-width: 263px;
+    padding: $lh 25px;
+    position: absolute;
+    //bottom: 0;
+    bottom: 50vh;
+
+    @media #{$flip} {
+      width: 50%;
+      bottom: 0;
+      padding: 2 * $lh 25px;
+    }
+
+    p {
+      color: $mainColor;
+      text-align: center;
+      width: 100%;
+      color: $white;
+      margin: 0;
+
+      &:nth-of-type(2) {
+        margin: 12.5px 0 0;
+      }
+
+      @media (max-width: 350px) {
+        font-size: 1.2rem;
+      }
+
+      @media #{$flip} {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+.profileContainer {
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+  min-height: 15 * $lh;
+  min-width: 263px;
+  background-color: $white;
+
+  @media #{$flip} {
+    height: 100vh;
+    width: 50%;
+    align-items: flex-end;
+  }
+}
+
+.profile {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media #{$flip} {
+    height: auto;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+  }
+}
+
+.title {
+  text-align: center;
+  min-width: 233.813px;
+
+  @media #{$flip} {
+    text-align: left;
+  }
+
+  h1 {
+    color: $mainColor;
+    font-weight: 800;
+    min-width: 301px;
+
+    @media #{$flip} {
+      max-width: 290px;
+      min-width: 233.813px;
+    }
+
+    @media (max-width: 350px) {
+      font-size: 3.5rem;
+    }
+  }
+
+  h2 {
+    color: $black;
+
+    @media (max-width: 350px) {
+      font-size: 1.8rem;
+    }
+
+    @media #{$flip} {
+      margin-bottom: $lh;
+    }
+  }
+}
+
+.button {
+  @include moveButton($lh);
+}
+
+div.socialLinks {
+  width: 50%;
+  height: 3 * $lh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  min-width: 250px;
+
+  @media #{$flip} {
+    margin-top: $lh;
+    justify-content: space-between;
+    min-width: 125px;
+    width: initial;
+  }
+
+  a {
+    color: $mainColor;
+    font-size: 4rem;
+    transition: color $trans;
+
+    &:nth-child(1) {
+      $color: #0077b5;
+      color: $color;
+
+      &:hover {
+        color: lighten($color, 10%);
+      }
+    }
+    &:nth-child(2) {
+      $color: #101010;
+      color: $color;
+
+      &:hover {
+        color: lighten($color, 20%);
+      }
+    }
+  }
+}
