@@ -1,5 +1,5 @@
-@import "../../../css/sassVariables.scss";
-@import "../../../css/mixins.scss";
+@import "css/sassVariables.scss";
+@import "css/mixins.scss";
 
 $bpMed: "(min-width: 700px)";
 
@@ -18,17 +18,18 @@ $bpMed: "(min-width: 700px)";
 
   @media #{$flip} {
     flex-direction: row;
+    justify-content: space-evenly;
   }
 
   .imgContainer {
-    height: 30vh;
+    height: 100vh;
     min-height: 13 * $lh;
+    max-height: 14 * $lh;
     overflow: hidden;
     margin: $lh 0 2 * $lh;
 
     @media #{$flip} {
-      width: calc(50% - 10px);
-      height: 50vh;
+      width: calc(30% - 10px);
       border-radius: 20px;
       margin: 0;
     }

@@ -27,6 +27,7 @@ export const ShadowMask = styled.div`
     }
   }
 `;
+
 export const MaskCard = styled.div`
   background-color: ${props => props.cardColor || "#fff"};
   overflow-y: hidden;
@@ -47,6 +48,7 @@ export const MaskCard = styled.div`
   right: 0;
   z-index: ${props => props.index || "1"};
 `;
+
 // function setTopMargin(margin, height) {
 //   if (!margin) return;
 //   const marginValue =
@@ -58,6 +60,7 @@ export const MaskCard = styled.div`
 //   const heightUnit = height.substring(index);
 //   return `${Number(marginValue) * 2 + Number(heightValue)}${heightUnit}`;
 // }
+
 function halfHeight(height) {
   if (!height) return;
   const index = indexOfNonNumeric(height);

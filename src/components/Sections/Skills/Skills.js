@@ -40,12 +40,12 @@ function Skills() {
             in any industry. For example, I am very skilled at teaching people
             new skills and I can manage teams of people very effectively.
           </p>
-          <p className={styles.para}>
+          {/* <p className={styles.para}>
             These skills have proven most valuable recently in my TA position at
             Lambda School. My feedback is detailed and catered to the student.
             This has allowed my more skilled students to ramp up faster while
             preventing struggling students from falling further behind.
-          </p>
+          </p> */}
           <p className={styles.para}>
             In regards to coding, I have spent the majority of the last two
             years focused on frontend development. I particularly enjoy the UI
@@ -55,9 +55,6 @@ function Skills() {
           </p>
         </div>
       </main>
-      <a href="#projects" className={styles.moveButton}>
-        <button>Projects</button>
-      </a>
     </section>
   );
 }

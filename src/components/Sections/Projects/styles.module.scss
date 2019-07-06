@@ -17,8 +17,7 @@ div.row {
 
 div.project {
   $border: 1px;
-  border: $border solid $black;
-  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.2);
+  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.5);
   padding: $lh - $border $lh;
   background-color: $white;
   border-radius: 20px;
@@ -32,6 +31,7 @@ div.project {
 
   h2 {
     margin: 0 0 $lh;
+    font-size: 2.5rem;
   }
 
   img {
@@ -47,13 +47,16 @@ div.project {
 }
 
 .fullCard {
-  padding: $lh;
+  padding: 0 $lh $lh;
+  overflow: scroll;
+  max-height: 90vh;
+  overflow-x: hidden;
   h2 {
     margin: $lh 0;
   }
   img {
-    width: 70%;
-    min-height: 400px;
+    width: 60%;
+    min-height: $lh * 8;
     height: 30vh;
     object-fit: scale-down;
     border-radius: 20px;
@@ -61,7 +64,17 @@ div.project {
   p {
     width: 100%;
     max-width: none;
-    margin-top: 2 * $lh;
+    margin-top: $lh;
+  }
+}
+
+div.demos {
+  display: flex;
+  justify-content: space-evenly;
+  height: auto;
+
+  a {
+    @include moveButton($lh / 2);
   }
 }
 
@@ -72,28 +85,28 @@ div.projectInfo {
 
 div.tech {
   width: 25%;
-  background-color: $tertiaryColor;
   border-radius: 20px;
+  min-width: 250px;
+
   h3 {
     width: 100%;
     text-align: center;
     font-size: 1.8rem;
-    line-height: 3 * $lh;
+    line-height: 2 * $lh;
     font-family: $fontHeader;
   }
   ul {
     display: flex;
     flex-direction: column;
-    color: $secondaryColor;
 
     li {
-      line-height: 2 * $lh;
+      line-height: $lh;
       padding-left: $lh;
       font-size: 1.5rem;
 
-      i {
-        margin-right: $lh;
-      }
+      // i {
+      //   margin-right: $lh;
+      // }
 
       span {
         display: inline-block;
@@ -106,13 +119,6 @@ div.tech {
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
-    }
-
-    li:nth-child(odd) {
-      background-color: $accent;
-    }
-    li:nth-child(even) {
-      background-color: $accentLight;
     }
   }
 }

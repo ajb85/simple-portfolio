@@ -28,39 +28,46 @@ function Projects({ observer }) {
                 <h3>Featured Tech</h3>
                 <ul>
                   {project.tech.map(tech => (
-                    <li>
+                    <li key={`${project.codeName} ${tech.name}`}>
                       <i className={tech.icon} style={{ color: tech.color }} />
                       <span>{tech.name}</span>
                     </li>
                   ))}
                 </ul>
-                <div>
-                  <h3>View:</h3>
-                  <span>Live Demo</span>
-                  <span>GitHub</span>
-                </div>
               </div>
             </div>
             <p>{project.longText}</p>
+            <div className={styles.demos}>
+              <a href={project.live} target="_blank" rel="noopener noreferrer">
+                <button>
+                  <i className="fal fa-bolt" /> Live Demo
+                </button>
+              </a>
+              <a href={project.code} target="_blank" rel="noopener noreferrer">
+                <button>
+                  <i className="fal fa-code" /> Code
+                </button>
+              </a>
+            </div>
           </div>
         </ShadowMask>
       ))
   );
 
-  const projectList = projectData.map((project, i) => (
-    <Project project={project} setView={setView} />
+  const projectList = projectData.map(project => (
+    <Project key={project.codeName} project={project} setView={setView} />
   ));
 
   const projectDIVs = [];
   for (let i = 0; i <= projectList.length; i += 2) {
     projectDIVs.push(
-      <div className={styles.row}>
+      <div className={styles.row} key={projectData[i].shortText}>
         {projectList[i]}
         {projectList[i + 1] ? projectList[i + 1] : null}
       </div>
     );
   }
-  console.log("CURRENT VIEW: ", view);
+
   return (
     <section id="projects" className={styles.Projects}>
       <h2 className={title}>Projects</h2>

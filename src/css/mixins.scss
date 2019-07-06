@@ -1,21 +1,21 @@
 @import "./sassVariables.scss";
 
-@mixin underline($color, $time: 0.25s, $margin: $lh) {
-  $height: 2px;
-  &::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: $height;
-    background: $color;
-    transition: width $time;
-    margin-top: calc($margin - $height);
-  }
-  &.active::after {
-    width: 100%;
-    margin-top: 23px;
-  }
-}
+// @mixin underline($color, $time: 0.25s, $margin: $lh) {
+//   $height: 2px;
+//   &::after {
+//     content: "";
+//     display: block;
+//     width: 0;
+//     height: $height;
+//     background: $color;
+//     transition: width $time;
+//     margin-top: calc($margin - $height);
+//   }
+//   &.active::after {
+//     width: 100%;
+//     margin-top: 23px;
+//   }
+// }
 
 @mixin reactToClick() {
   &:active {
@@ -23,19 +23,18 @@
   }
 }
 
-@mixin moveButton($margin: 2 * $lh) {
+@mixin moveButton($margin: 2 * $lh, $bColor: $accent, $cColor: $tertiaryColor) {
   $bMargin: 3px;
   $border: 2px;
-  border: $border solid $accent;
+  border: $border solid $bColor;
   transition: border $trans;
   cursor: pointer;
-  margin-top: $margin - 2 * $border - 2 * $bMargin;
-  margin-bottom: $margin;
+  margin: $lh 0 $margin - 2 * $border - 2 * $bMargin;
 
   button {
     border: none;
-    background-color: $accent;
-    color: $tertiaryColor;
+    background-color: $bColor;
+    color: $cColor;
     margin: $bMargin;
     padding: 0;
     width: 250px;
