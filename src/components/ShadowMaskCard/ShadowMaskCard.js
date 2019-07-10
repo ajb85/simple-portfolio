@@ -23,7 +23,7 @@ function ShadowMaskCard({
         opacity={opacity}
         index={index}
       >
-        <p>X</p>
+        <p>x</p>
       </ShadowMask>
       <MaskCard
         cardColor={cardColor}

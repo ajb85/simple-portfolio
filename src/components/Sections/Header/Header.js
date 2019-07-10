@@ -14,35 +14,33 @@ function Header() {
           <p>-Stephen King</p>
         </div>
       </div>
-      <div className={styles.profileContainer}>
-        <div className={styles.profile}>
-          <div className={styles.title}>
-            <h1>AJ Brush</h1>
-            <h2>Full Stack Web</h2>
-            <p>
-              Developer with a love for React and a passion for good training
-              and management
-            </p>
-          </div>
-          <a href="#about" className={styles.button}>
-            <button>About Me</button>
+      <div className={styles.profile}>
+        <div className={styles.title}>
+          <h1>AJ Brush</h1>
+          <h2>Full Stack Web</h2>
+          <p>
+            Developer with a love for React and a passion for good training and
+            management
+          </p>
+        </div>
+        <a href="#about" className={styles.button}>
+          <button>About Me</button>
+        </a>
+        <div className={styles.socialLinks}>
+          <a
+            href="https://www.linkedin.com/in/andrew-brush-58205b122/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-linkedin" />
           </a>
-          <div className={styles.socialLinks}>
-            <a
-              href="https://www.linkedin.com/in/andrew-brush-58205b122/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-linkedin" />
-            </a>
-            <a
-              href="https://github.com/ajb85"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-github-square" />
-            </a>
-          </div>
+          <a
+            href="https://github.com/ajb85"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-github-square" />
+          </a>
         </div>
       </div>
     </header>

@@ -15,17 +15,17 @@ body {
 
 h1 {
   font-size: 4.5rem;
-  line-height: 75px;
+  line-height: 2 * $lh;
   font-family: $fontHeader;
 }
 
 h2 {
   font-size: 2.3rem;
-  line-height: 50px;
+  line-height: 2 * $lh;
   font-family: $fontHeader;
 }
 
 p {
-  line-height: 25px;
+  line-height: $lh;
   font-size: 1.5rem;
 }

@@ -12,6 +12,7 @@
     justify-content: space-evenly;
     flex-direction: column;
     padding: $lh 0;
+    width: 100%;
 
     @media #{$flip} {
       width: 100%;
@@ -21,27 +22,44 @@
 
   .tableContainer {
     display: flex;
-    // flex-wrap: wrap;
+    flex-direction: column;
     margin: auto;
     justify-content: space-evenly;
     align-items: flex-start;
-    max-width: 800px;
-    width: 80%;
-    border-radius: 20px;
+    // max-width: 800px;
+    width: 100%;
     overflow: hidden;
 
-    @media (min-width: 650px) {
-      // max-width: initial;
+    @media (min-width: 692px) {
+      flex-direction: row;
     }
   }
 }
 
 ul.skillsList {
   min-width: 260px;
+  // max-width: 320px;
   margin: 0px;
   width: 100%;
   background-color: $white;
   color: $black;
+  overflow: hidden;
+
+  &:first-of-type {
+    border-radius: 20px 20px 0 0;
+  }
+  &:last-of-type {
+    border-radius: 0 0 20px 20px;
+  }
+
+  @media (min-width: 692px) {
+    &:first-of-type {
+      border-radius: 20px 0 0 20px;
+    }
+    &:last-of-type {
+      border-radius: 0 20px 20px 0;
+    }
+  }
 
   h2 {
     text-align: center;
@@ -71,8 +89,8 @@ ul.skillsList {
     }
 
     div {
-      max-width: 190px;
-      min-width: 160px;
+      // max-width: 190px;
+      // min-width: 160px;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -88,8 +106,8 @@ ul.skillsList {
         white-space: nowrap;
 
         @media (max-width: 400px) {
-          max-width: 130px;
-          min-width: 130px;
+          // max-width: 130px;
+          // min-width: 130px;
         }
       }
     } // div
@@ -101,14 +119,22 @@ div.textContainer {
   flex-direction: column;
   align-items: center;
   margin-top: 2 * $lh;
+  width: 100%;
 
-  @media #{$flip} {
-    margin-top: 0;
+  @media (min-width: 692px) {
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 
   p.para {
     font-size: 1.5rem;
     max-width: 500px;
+
+    @media (min-width: 692px) {
+      &:first-of-type {
+        margin-right: 30px;
+      }
+    }
   }
 }
 

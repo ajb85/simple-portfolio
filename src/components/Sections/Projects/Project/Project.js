@@ -5,8 +5,10 @@ function Project({ project, setView }) {
   const { title, shortText, altText, codeName } = project;
   return (
     <div className={styles.project} onClick={() => setView(codeName)}>
-      <h2>{title}</h2>
-      <img src={require(`img/Projects/${codeName}.png`)} alt={altText} />
+      <div style={{ position: "relative" }}>
+        <h3>{title}</h3>
+        <img src={require(`img/Projects/${codeName}.png`)} alt={altText} />
+      </div>
       <p>{shortText}</p>
     </div>
   );
