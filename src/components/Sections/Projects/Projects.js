@@ -58,21 +58,20 @@ function Projects({ observer }) {
     <Project key={project.codeName} project={project} setView={setView} />
   ));
 
-  const projectDIVs = [];
-  for (let i = 0; i <= projectList.length; i += 2) {
-    projectDIVs.push(
-      <div className={styles.row} key={projectData[i].shortText}>
-        {projectList[i]}
-        {projectList[i + 1] ? projectList[i + 1] : null}
-      </div>
-    );
-  }
+  // const projectDIVs = [];
+  // for (let i = 0; i <= projectList.length; i += 2) {
+  //   projectDIVs.push(
+  //     <div className={styles.row} key={projectData[i].shortText}>
+  //       {projectList[i]}
+  //       {projectList[i + 1] ? projectList[i + 1] : null}
+  //     </div>
+  //   );
+  // }
 
   return (
     <section id="projects" className={styles.Projects}>
       <h2 className={title}>Projects</h2>
-      <div ref={observer.reference} />
-      {projectDIVs}
+      {projectList}
       {views[view] ? views[view] : null}
     </section>
   );
