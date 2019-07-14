@@ -1,0 +1,57 @@
+@import "css/sassVariables.scss";
+@import "css/mixins.scss";
+
+$navFlip: "(min-width: 700px)";
+
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $white;
+  z-index: 5;
+  padding: $lh / 4 $lh;
+  min-width: 283px;
+  line-height: $lh;
+
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.25s, opacity 0.25s;
+
+  a {
+    text-decoration: none;
+    color: $black;
+
+    &:hover {
+      color: $darkBlack;
+    }
+
+    &:active {
+      color: $accentLight;
+      @include reactToClick();
+    }
+  }
+
+  .text {
+    display: none;
+    font-size: 1.5rem;
+
+    @media #{$navFlip} {
+      display: initial;
+    }
+  }
+
+  .icon {
+    font-size: 2rem;
+
+    @media #{$navFlip} {
+      display: none;
+    }
+  }
+
+  &.inactive {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
