@@ -21,6 +21,7 @@ function Projects({ observer }) {
             <h2>{project.title}</h2>
             <div className={styles.projectInfo}>
               <img
+                className={styles.projectPreview}
                 src={require(`img/Projects/${project.codeName}.png`)}
                 alt={project.altText}
               />
@@ -29,7 +30,17 @@ function Projects({ observer }) {
                 <ul>
                   {project.tech.map(tech => (
                     <li key={`${project.codeName} ${tech.name}`}>
-                      <i className={tech.icon} style={{ color: tech.color }} />
+                      {tech.icon ? (
+                        <i
+                          className={tech.icon}
+                          style={{ color: tech.color }}
+                        />
+                      ) : (
+                        <img
+                          src={require(`img/logos/${tech.logo}`)}
+                          alt="Tech Logo"
+                        />
+                      )}
                       <span>{tech.name}</span>
                     </li>
                   ))}

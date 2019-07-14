@@ -28,6 +28,7 @@
     align-items: flex-start;
     // max-width: 800px;
     width: 100%;
+    max-width: 1300px;
     overflow: hidden;
 
     @media (min-width: 692px) {
@@ -118,8 +119,9 @@ div.textContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2 * $lh;
+  margin: 2 * $lh auto 0;
   width: 100%;
+  max-width: 1300px;
 
   @media (min-width: 692px) {
     flex-direction: row;

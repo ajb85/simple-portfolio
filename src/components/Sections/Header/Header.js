@@ -2,9 +2,10 @@ import React from "react";
 import styles from "./styles.module.scss";
 import headerIMG from "img/backgrounds/rainier_bright.jpg";
 
-function Header() {
+function Header({ observer }) {
   return (
-    <header>
+    <header id="home">
+      <div ref={observer.reference} />
       <div className={styles.headerIMG}>
         <img src={headerIMG} alt="Mt. Rainier in June 2014" />
         <div className={styles.quote}>

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 const font = `"Istok Web", sans-serif`;
+const cardBreak = "(min-width: 700px)";
 
 export const ShadowMask = styled.div`
   width: 100vw;
@@ -15,11 +16,18 @@ export const ShadowMask = styled.div`
 
   p {
     position: absolute;
-    top: 12px;
-    right: 40px;
+    display: inline-block;
+    top: 4.5px;
+    left: -3.5px;
+    right: 0;
+    margin: 0 auto;
     color: #eee;
-    width: initial;
+    width: fit-content;
     font-family: ${font};
+
+    @media ${cardBreak} {
+      right: 40px;
+    }
 
     &:hover {
       color: #aaa;

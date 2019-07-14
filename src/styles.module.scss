@@ -14,12 +14,16 @@ section {
   overflow: hidden;
 
   h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: $fontHeader;
     width: 100%;
     text-align: center;
     margin: $lh * 1.5 0;
     line-height: 2 * $lh;
+
+    @media (min-width: 400px) {
+      font-size: 3rem;
+    }
   }
 
   p {

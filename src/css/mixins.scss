@@ -1,21 +1,20 @@
 @import "./sassVariables.scss";
 
-// @mixin underline($color, $time: 0.25s, $margin: $lh) {
-//   $height: 2px;
-//   &::after {
-//     content: "";
-//     display: block;
-//     width: 0;
-//     height: $height;
-//     background: $color;
-//     transition: width $time;
-//     margin-top: calc($margin - $height);
-//   }
-//   &.active::after {
-//     width: 100%;
-//     margin-top: 23px;
-//   }
-// }
+@mixin underline($color, $time: 0.25s, $margin: $lh) {
+  $height: 3px;
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: $height;
+    background: $color;
+    transition: width $time;
+    margin-top: calc($margin - $height);
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
 
 @mixin reactToClick() {
   &:active {
