@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Istok+Web|Poppins|Roboto&display=swap");
 
-$mainColor: #46564e;
+$mainColor: darken(#46564e, 10%);
 $mainColorLight: #8e8363;
 $secondaryColor: #fefefe;
 $tertiaryColor: #b8a08f;
@@ -9,6 +9,9 @@ $accentLight: #6b575e;
 $black: #36454f;
 $darkBlack: #0f1316;
 $white: $secondaryColor;
+$darkWhite: darken($white, 10%);
+
+$shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
 
 // Fonts
 $fontHeader: "Poppins", sans-serif;

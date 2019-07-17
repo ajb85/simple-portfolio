@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Project from "./Project/";
 import ShadowMask from "../../ShadowMaskCard/";
@@ -6,8 +6,8 @@ import projectData from "./projectData.js";
 
 import styles from "./styles.module.scss";
 
-function Projects({ observer }) {
-  const [view, setView] = useState(null);
+function Projects({ observer, projectView }) {
+  const [view, setView] = projectView;
   const title = observer.inView
     ? `${styles.title} ${styles.active}`
     : `${styles.title}`;
@@ -30,17 +30,19 @@ function Projects({ observer }) {
                 <ul>
                   {project.tech.map(tech => (
                     <li key={`${project.codeName} ${tech.name}`}>
-                      {tech.icon ? (
-                        <i
-                          className={tech.icon}
-                          style={{ color: tech.color }}
-                        />
-                      ) : (
-                        <img
-                          src={require(`img/logos/${tech.logo}`)}
-                          alt="Tech Logo"
-                        />
-                      )}
+                      <div className={styles.techLogo}>
+                        {tech.icon ? (
+                          <i
+                            className={tech.icon}
+                            style={{ color: tech.color }}
+                          />
+                        ) : (
+                          <img
+                            src={require(`img/logos/${tech.logo}`)}
+                            alt="Tech Logo"
+                          />
+                        )}
+                      </div>
                       <span>{tech.name}</span>
                     </li>
                   ))}
@@ -50,14 +52,11 @@ function Projects({ observer }) {
             <p>{project.longText}</p>
             <div className={styles.demos}>
               <a href={project.live} target="_blank" rel="noopener noreferrer">
-                <button>
-                  <i className="fal fa-bolt" /> Live Demo
-                </button>
+                <i className="fal fa-heart-rate" />
+                Live Demo
               </a>
               <a href={project.code} target="_blank" rel="noopener noreferrer">
-                <button>
-                  <i className="fal fa-code" /> Code
-                </button>
+                <i className="fal fa-code" /> Code
               </a>
             </div>
           </div>
@@ -68,16 +67,6 @@ function Projects({ observer }) {
   const projectList = projectData.map(project => (
     <Project key={project.codeName} project={project} setView={setView} />
   ));
-
-  // const projectDIVs = [];
-  // for (let i = 0; i <= projectList.length; i += 2) {
-  //   projectDIVs.push(
-  //     <div className={styles.row} key={projectData[i].shortText}>
-  //       {projectList[i]}
-  //       {projectList[i + 1] ? projectList[i + 1] : null}
-  //     </div>
-  //   );
-  // }
 
   return (
     <section id="projects" className={styles.Projects}>

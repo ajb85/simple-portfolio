@@ -2,9 +2,13 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 
-function Navigation({ observer }) {
+function Navigation({ observer, projectView }) {
   return (
-    <nav className={`${styles.Nav} ${observer.inView ? styles.inactive : ""}`}>
+    <nav
+      className={`${styles.Nav} ${
+        !observer.inView && !projectView ? styles.active : ""
+      }`}
+    >
       <a href="#home" className={styles.text}>
         Home
       </a>

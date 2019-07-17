@@ -1,5 +1,5 @@
 // Libraries
-import React from "react";
+import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 // Styles
@@ -16,15 +16,15 @@ import Projects from "components/Sections/Projects/";
 import Contact from "components/Sections/Contact/";
 
 function App() {
+  const projectView = useState(null);
   let observers = createViewHooks();
   return (
     <div className={styles.App}>
-      <div />
-      <Navigation observer={observers.Header} />
+      <Navigation observer={observers.Header} projectView={projectView[0]} />
       <Header observer={observers.Header} />
       <About observer={observers.About} />
       <Skills observer={observers.Skills} />
-      <Projects observer={observers.Projects} />
+      <Projects observer={observers.Projects} projectView={projectView} />
       <Contact />
     </div>
   );

@@ -27,6 +27,7 @@ export const ShadowMask = styled.div`
 
     @media ${cardBreak} {
       right: 40px;
+      left: initial;
     }
 
     &:hover {

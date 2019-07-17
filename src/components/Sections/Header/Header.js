@@ -5,7 +5,7 @@ import headerIMG from "img/backgrounds/rainier_bright.jpg";
 function Header({ observer }) {
   return (
     <header id="home">
-      <div ref={observer.reference} />
+      <div ref={observer.reference} style={{ position: "absolute", top: 0 }} />
       <div className={styles.headerIMG}>
         <img src={headerIMG} alt="Mt. Rainier in June 2014" />
         <div className={styles.quote}>
@@ -18,14 +18,14 @@ function Header({ observer }) {
       <div className={styles.profile}>
         <div className={styles.title}>
           <h1>AJ Brush</h1>
-          <h2>Full Stack Web</h2>
+          <h2>Full Stack Engineer</h2>
           <p>
             Developer with a love for React and a passion for good training and
             management
           </p>
         </div>
         <a href="#about" className={styles.button}>
-          <button>About Me</button>
+          About Me
         </a>
         <div className={styles.socialLinks}>
           <a
