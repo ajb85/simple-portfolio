@@ -18,13 +18,14 @@ $fontHeader: "Poppins", sans-serif;
 $fontSubHead: "Istok Web", sans-serif;
 $font: "Roboto", sans-serif;
 
+// Breakpoints
+$flip: "(min-width: 900px)";
+$mobile: "(max-width:900px) and (max-height: 675px)";
+
 // Sizing
 $minSize: 280px;
 $maxSize: 2200px;
 $lh: 35px;
-
-// Breakpoints
-$flip: "(min-width: 900px)";
 
 // Time
 $trans: 0.5s;

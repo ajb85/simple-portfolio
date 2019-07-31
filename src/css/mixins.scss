@@ -9,7 +9,7 @@
     height: $height;
     background: $color;
     transition: width $time;
-    margin-top: calc($margin - $height);
+    margin-top: $height;
   }
   &:hover::after {
     width: 100%;
@@ -27,6 +27,7 @@
 
 @mixin moveButton($margin: 2 * $lh, $bColor: $accent, $cColor: $tertiaryColor) {
   height: 2 * $lh;
+  min-height: 1.5 * $lh;
   width: 260px;
   font-size: 2rem;
   text-decoration: none;
@@ -36,7 +37,7 @@
   align-items: center;
   box-shadow: $shadow;
 
-  margin: $lh 0 $lh / 2;
+  margin: $lh / 2 0;
 
   // background-color: $accent;
   // border: 3px solid $accentLight;
