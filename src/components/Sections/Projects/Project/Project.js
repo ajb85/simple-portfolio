@@ -8,9 +8,7 @@ function Project({ project, setView }) {
     <div className={styles.project} onClick={() => setView(codeName)}>
       <div
         className={styles.fullBleed}
-        style={{
-          backgroundImage: `url(${image})`
-        }}
+        style={{ backgroundImage: `url(${image})` }}
       >
         <h3>{title}</h3>
       </div>
