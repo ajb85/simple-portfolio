@@ -23,6 +23,12 @@ header {
   @media #{$flip} {
     width: 50%;
     height: 100vh;
+    min-height: none;
+  }
+
+  @media #{$mobile} {
+    min-height: 170px;
+    height: 25vh;
   }
 
   img {
@@ -35,9 +41,6 @@ header {
     width: 100%;
     min-width: 263px;
     min-height: 4 * $lh;
-
-    @media #{$flip} {
-    }
   }
 
   div.quote {
@@ -74,12 +77,12 @@ header {
       @media #{$flip} {
         margin-top: 50px;
       }
+
+      @media #{$mobile} {
+        display: none;
+      }
     }
   }
-}
-
-.profileContainer {
-  // min-height: 15 * $lh;
 }
 
 .profile {
@@ -106,10 +109,18 @@ header {
 .title {
   text-align: center;
   min-width: 233.813px;
+  margin-bottom: $lh / 2;
+  margin-top: $lh;
 
   p {
     @media #{$flip} {
       max-width: 420px;
+    }
+
+    @media #{$mobile} {
+      font-size: 1.2rem;
+      max-width: 90%;
+      margin: 0 auto;
     }
   }
 
@@ -127,20 +138,24 @@ header {
       min-width: 233.813px;
     }
 
-    @media (max-width: 350px) {
-      font-size: 3.5rem;
+    @media #{$mobile} {
+      font-size: 3.8rem;
     }
   }
 
   h2 {
     color: $black;
 
-    @media (max-width: 350px) {
-      font-size: 1.8rem;
-    }
+    // @media (max-width: 350px) {
+    //   font-size: 1.8rem;
+    // }
 
     @media #{$flip} {
       margin-bottom: $lh;
+    }
+
+    @media #{$mobile} {
+      font-size: 2rem;
     }
   }
 }

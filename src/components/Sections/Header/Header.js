@@ -20,8 +20,8 @@ function Header({ observer }) {
           <h1>AJ Brush</h1>
           <h2>Full Stack Engineer</h2>
           <p>
-            Developer with a love for React and a passion for good training and
-            management
+            A passionate problem solver with an extensive background in training
+            and managing people.
           </p>
         </div>
         <a href="#about" className={styles.button}>
