@@ -34,6 +34,19 @@ $bpMed: "(min-width: 700px)";
       margin: 0;
     }
 
+    @media #{$mobile} {
+      max-height: 250px;
+      min-height: 250px;
+      margin: $lh / 2 0;
+    }
+
+    @media (max-width: 590px) and (max-height: 675px) {
+      max-height: 300px;
+      min-height: 300px;
+
+      margin: $lh / 2 0;
+    }
+
     img {
       width: 1100px;
       position: relative;
@@ -44,6 +57,22 @@ $bpMed: "(min-width: 700px)";
         bottom: 210px;
         transform: scaleX(-1);
         right: calc(440px - 45%);
+      }
+
+      @media #{$mobile} {
+        width: 1200px;
+        max-height: 250px;
+        object-fit: cover;
+        bottom: 0px;
+        object-position: 50% 39%;
+      }
+
+      @media (max-width: 590px) and (max-height: 675px) {
+        width: 700px;
+        max-height: 200px;
+        object-fit: cover;
+        bottom: 0px;
+        object-position: 50% 48%;
       }
     }
   }
