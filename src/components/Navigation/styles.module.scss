@@ -14,6 +14,7 @@ $navFlip: "(min-width: 700px)";
   padding: $lh / 4 20px;
   min-width: 283px;
   line-height: $lh;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
 
   visibility: hidden;
   opacity: 0;
