@@ -184,6 +184,10 @@ div.socialLinks {
     width: initial;
   }
 
+  @media #{$mobile} {
+    display: none;
+  }
+
   a {
     color: $mainColor;
     font-size: 4rem;
