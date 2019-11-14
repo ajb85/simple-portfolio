@@ -1,11 +1,11 @@
 const react = { name: 'React', icon: 'fab fa-react fa-spin', color: '#00D8FF' };
-const redux = { name: 'Redux', logo: 'redux.png' };
+// const redux = { name: 'Redux', logo: 'redux.png' };
 const sass = { name: 'SCSS', logo: 'sass.png' };
 // const materialUI = { name: "Material UI", logo: "material-ui.png" };
 
 export default [
   {
-    title: 'ChatWise',
+    title: 'Chatwise',
     codeName: 'chatWise',
     tech: [
       react,
@@ -15,7 +15,7 @@ export default [
     ],
     shortText:
       'Facebook Messenger Chatbot that reads short book summaries to users.',
-    altText: 'Dashboard of AppraiserBFF',
+    altText: 'Messenger view of the bot',
     longText:
       "This app has been in development since August, which I've worked on with two other developers.  It was built for a stakeholder who had a vision to have a bot that could read book summaries to his client.  My role on this project was to guide the other two developers to complete a project in addition to personally see goals were hit.  I was the architect for the backend and responsible for the overall flow of receiving webhooks.",
     live: 'https://m.me/ChatwiseBooks',

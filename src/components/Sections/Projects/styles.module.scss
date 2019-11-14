@@ -1,10 +1,10 @@
-@import "css/sassVariables.scss";
-@import "css/mixins.scss";
+@import 'css/sassVariables.scss';
+@import 'css/mixins.scss';
 
-$cardBreak: "(min-width: 730px)";
+$cardBreak: '(min-width: 730px)';
 
 .Projects {
-  background-image: url("img/patterns/fishnets-and-hearts.png");
+  background-image: url('../../../img/patterns/fishnets-and-hearts.png');
   color: $black;
   height: auto;
 }

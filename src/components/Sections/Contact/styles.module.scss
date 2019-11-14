@@ -1,8 +1,8 @@
-@import "css/sassVariables.scss";
-@import "css/mixins.scss";
+@import 'css/sassVariables.scss';
+@import 'css/mixins.scss';
 
 .Contact {
-  background-image: url("img/patterns/prism.png");
+  background-image: url('../../../img/patterns/prism.png');
   color: $white;
   height: auto;
 
@@ -84,7 +84,7 @@
 
       &::after {
         $height: 3px;
-        content: "";
+        content: '';
         display: block;
         color: $black;
         width: 0%;

@@ -1,11 +1,11 @@
-@import "css/sassVariables.scss";
-@import "css/mixins.scss";
+@import 'css/sassVariables.scss';
+@import 'css/mixins.scss';
 
-$bpMed: "(min-width: 700px)";
+$bpMed: '(min-width: 700px)';
 
 .About {
   height: auto;
-  background-image: url("img/patterns/fishnets-and-hearts.png");
+  background-image: url('../../../img/patterns/fishnets-and-hearts.png');
   color: $black;
 } // .About
 
